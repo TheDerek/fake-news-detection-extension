@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="fontawesome.js"></script>
+    <style>
+        button {
+            color: white;
+        }
+        body {
+            width: 64px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="loading">
+    <p align="center" id="response">Analysing Article...</p>
+    <img id="loading-img" src="images/loading.gif" style="width: 54px; height: 54px;">
+</div>
+
+<div id="real-news" style="display: none">
+    <p align="center" class="real puff-in-center">Real News</p>
+    <svg class="checkmark"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+    </svg>
+</div>
+
+<div id="fake-news" style="display: none">
+    <p align="center" class="fake puff-in-center">Fake News</p>
+    <svg class="crossmark" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6"
+                stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
+              stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8"
+              y2="92.3"/>
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6"
+              stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4"
+              y2="92.2"/>
+    </svg>
+</div>
+
+<div id="error-news" style="display: none">
+    <p align="center" class="puff-in-center" id="error-msg">Error
+    </p>
+    <i class="fas fa-exclamation-triangle swirl-in-fwd error-icon"></i>
+</div>
+<!--<button id="changeColor">Analyse Article</button>-->
+<!--<p id="response"></p>-->
+<script src="popup.js"></script>
+</body>
+</html>
