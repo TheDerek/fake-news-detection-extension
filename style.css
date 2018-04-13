@@ -1,5 +1,9 @@
 /* Warning */
 
+.msg {
+    font-weight: bold;
+}
+
 .swirl-in-fwd {
     animation: swirl-in-fwd 0.6s ease-out both;
 }
@@ -12,12 +16,12 @@
     display: block;
     margin: 0 auto;
     font-size: x-large;
-    color: #F8BB86;
+    color: #ba8c62;
     margin-bottom: 17px;
 }
 
 #error-msg {
-    color: #F8BB86;
+    color: #ba8b5e;
 }
 
 .fake {

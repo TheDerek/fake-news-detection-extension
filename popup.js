@@ -61,6 +61,11 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
                     // Examine the text in the response
                     response.json().then(function(data) {
                         console.log(data);
+                        if(!data['is_article']) {
+                            setError('No article found.');
+                            return
+                        }
+
                         if (data['category'] === 'fake') {
                             setFakeNews()
                         }
