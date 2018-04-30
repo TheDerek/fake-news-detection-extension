@@ -63,7 +63,7 @@ let startTime = new Date().getTime();
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     let url = encodeURIComponent(tabs[0].url);
 
-    fetch(`http://127.0.0.1:5000/get/${url}`)
+    fetch(`http://51.15.232.31:5000/get/${url}`)
         .then(response => sleep(startTime, response))
         .then(response => acceptResponse(response))
         .then(response => response.json())
@@ -73,3 +73,13 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
             setError(err);
         });
 });
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26368636-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
